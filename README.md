@@ -29,7 +29,7 @@ Android_Skin
 	1）接入口
 	Activity 也是一个 Context ... 更准确的来说，他是一个 ContextThemeWrapper ...  而真正的 Context 是通过 attachBaseContext 设置进来的 ... 那么，我们以此为入口，通过重写 attachBaseContext  代理一下外部设置进来的 ContextImpl ...
 	2）插件资源的管理类的选择
-   细究 Android 资源管理机制，我们可以轻易发现，Android 资源的管理是通过 Resource 这个类来管理。而APP Resource 在内存中只有一个备份的，以WeakReference 形式。那么我们以这个思路，设计一个皮肤插件管理类，管理皮肤插件 Resource。
+	细究 Android 资源管理机制，我们可以轻易发现，Android 资源的管理是通过 Resource 这个类来管理。而APP Resource 在内存中只有一个备份的，以WeakReference 形式。那么我们以这个思路，设计一个皮肤插件管理类，管理皮肤插件 Resource。
 	3）如何换非 inflater View 的资源呢？
 	这里的资源不一定是以文件形式存在，R 文件里包含的所有内容都是资源。
 	也许，有看过插件式开发的同学，会对此嗤之以鼻，可能会认为只要加载了皮肤插件包资源就 OK了。但这皮肤插件资源必须与宿主应用的资源数量、类型要保持一致，多一个少一个都不行。原因是：同一 resid，可能是宿主应用包和插件应用包都有，而对应资源却是不同的 ... 但，后续开发，不会涉及资源这一模块的变化么？那是不可能的 ... 

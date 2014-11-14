@@ -41,4 +41,11 @@ Android_Skin
    	
 功能插件
 
+	得空再写这些文档吧 ...
+
 详细介绍见：http://www.eoeandroid.com/thread-553503-1-1.html
+
+	说多了都是泪，就酱紫大家将就着自己读代码吧 ... 如有不理解的，可以发 Email 问我
+
+												Author: 林恒龙
+												Email:v7lin@qq.com

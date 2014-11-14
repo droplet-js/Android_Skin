@@ -1,0 +1,12 @@
+# view AndroidManifest.xml #generated:56
+-keep class android.test.InstrumentationTestRunner { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.v7lin.android.content.EnvAppConfig { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.v7lin.android.test.TestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.v7lin.android.test.TestDexActivity { <init>(...); }
+

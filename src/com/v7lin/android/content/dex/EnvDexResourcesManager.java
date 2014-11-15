@@ -61,13 +61,13 @@ public class EnvDexResourcesManager {
 					isValid = Boolean.valueOf(String.valueOf(object)).booleanValue();
 				}
 				if (!isValid) {
-					File skinFile = new File(PathUtils.getDexAppDir(context), dexName);
-					if (skinFile.exists() && skinFile.isFile()) {
+					File dexFile = new File(PathUtils.getDexAppDir(context), dexName);
+					if (dexFile.exists() && dexFile.isFile()) {
 						Class<?> clazz = AssetManager.class;
-						AssetManager skinAsset = (AssetManager) clazz.newInstance();
+						AssetManager dexAsset = (AssetManager) clazz.newInstance();
 						Method method = clazz.getDeclaredMethod("addAssetPath", String.class);
-						method.invoke(skinAsset, skinFile.getAbsolutePath());
-						res = new Resources(skinAsset, context.getResources().getDisplayMetrics(), context.getResources().getConfiguration());
+						method.invoke(dexAsset, dexFile.getAbsolutePath());
+						res = new Resources(dexAsset, context.getResources().getDisplayMetrics(), context.getResources().getConfiguration());
 						mActiveResources.put(dexName, new WeakReference<Resources>(res));
 					}
 				}

@@ -1,6 +1,9 @@
 Android_Skin
 ============
 
+@Deprecated
+项目已迁移至 https://github.com/v7lin/Android_Skin_2.0
+
 前言
 
 	先来拉下仇恨，看看能不能让让仇恨满级 ...
